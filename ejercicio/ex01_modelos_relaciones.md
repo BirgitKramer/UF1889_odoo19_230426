@@ -43,7 +43,6 @@ Es el modelo desde el que tiene sentido resumir informacion como:
 Representa cada tutoria realizada o registrada
 
 Cada registro de este modelo representa una interaccion concreta:
-
 - asunto
 - fecha
 - notas
@@ -65,4 +64,19 @@ En odoo, esto se modela asi:
 - en `academy.tutoring`: un `Many2one` hacia `academy.student`
 -  en `academy.student`: un `One2many` hacia `academy.tutoring`
 
+#### 5. Por que la relacionse diseña asi?
+No solo poner codigo, sino justficarlo.
+
+La relacion es 1-N porque:
+- el alumno es la entidad acumuladora de actvidad
+- la tutoria es una ocurrencia en el tiempo
+- necesitamos poder contar turtorias por alumno
+- necesitamos navegar desde el alumno a sus tutorias y desde la tutoria al alumno
+
+Dicho de otro modo:
+- `academy.student` responde a "quien es"
+- `academy.tutoring` a "que interaccion hubo"
+
+Este es el patron que aparece en los dominios
+- alumnos -> tutorias 
 
