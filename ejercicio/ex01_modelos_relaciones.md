@@ -44,5 +44,25 @@ Representa cada tutoria realizada o registrada
 
 Cada registro de este modelo representa una interaccion concreta:
 
-- 
+- asunto
+- fecha
+- notas
+- alumno al que pertence
+
+Es la cantidad "que ocurrio"
+
+#### 4. Relacion entre los modelos
+
+La relacion logica del negocio es:
+- un alumno puede tener muchas tutorias
+- una tutoria pertenece a un solo alumno
+
+Esto es una relacion 1 a N:
+- 1 alumno
+- N tutorias
+
+En odoo, esto se modela asi:
+- en `academy.tutoring`: un `Many2one` hacia `academy.student`
+-  en `academy.student`: un `One2many` hacia `academy.tutoring`
+
 
