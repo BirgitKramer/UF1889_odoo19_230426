@@ -5,7 +5,11 @@
     'author': 'Alumno',
     'category': 'Education',
     'depends': ['base'],
-    'data': [],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/student_views.xml',
+        'views/tutoring_views.xml',
+    ],
     'demo': [],
     'application': False,
     'auto_install': False,
