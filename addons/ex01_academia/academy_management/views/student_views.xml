@@ -40,13 +40,4 @@
             </form>
         </field>
     </record>
-
-    <record id="action_student" model="ir.actions.act_window">
-        <field name="name">Students</field>
-        <field name="res_model">academy.student</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
-    <menuitem id="menu_academy_root" name="Academy"/>
-    <menuitem id="menu_student" name="Students" action="action_student" parent="menu_academy_root"/>
 </odoo>

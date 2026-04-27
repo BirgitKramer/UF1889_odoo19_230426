@@ -9,6 +9,7 @@
         'security/ir.model.access.csv',
         'views/student_views.xml',
         'views/tutoring_views.xml',
+        'views/menu.xml',
     ],
     'demo': [],
     'application': False,

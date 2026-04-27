@@ -8,6 +8,7 @@
                 <field name="name"/>
                 <field name="date"/>
                 <field name="student_id"/>
+                <field name="notes"/>
             </tree>
         </field>
     </record>
@@ -28,12 +29,4 @@
             </form>
         </field>
     </record>
-
-    <record id="action_tutoring" model="ir.actions.act_window">
-        <field name="name">Tutorings</field>
-        <field name="res_model">academy.tutoring</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
-    <menuitem id="menu_tutoring" name="Tutorings" action="action_tutoring" parent="menu_academy_root"/>
 </odoo>
