@@ -27,7 +27,5 @@ class Student(models.Model):
         string='Active', 
         default=True)
 
-    tutoring_ids = fields.One2many(
-        'academy.tutoring', 
-        'student_id', 
+    tutoring_ids = fields.One2many 'academy_tutoring','student_id',(
         string='Tutorings')
