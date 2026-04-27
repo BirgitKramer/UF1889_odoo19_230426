@@ -15,7 +15,7 @@ class Tutoring(models.Model):
     )
     course = fields.Char(string='Course')
     date = fields.Date(
-        string='Date'
+        string='Date',
         required=True,
     )
     duration= fields.Float(string='Duration(hours)')
