@@ -38,6 +38,8 @@ Es el modelo desde el que tiene sentido resumir informacion como:
 - ultima tutoria
 - estado academico
 
+Es la cantidad "quien" 
+
 ### Modelo de actividad: `academy.tutoring`
 
 Representa cada tutoria realizada o registrada
