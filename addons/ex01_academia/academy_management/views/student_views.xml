@@ -7,6 +7,9 @@
             <tree string="Students">
                 <field name="name"/>
                 <field name="email"/>
+                <field name="phone"/>
+                <field name="tutoring_count"/>
+                <field name="last_tutoring_date"/>
                 <field name="state"/>
             </tree>
         </field>
@@ -18,10 +21,17 @@
         <field name="arch" type="xml">
             <form string="Student">
                 <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
                     <group>
                         <field name="name"/>
                         <field name="email"/>
+                        <field name="phone"/>
+                        <field name="active"/>
                         <field name="state"/>
+                    </group>
+                    <group string="Statistics">
+                        <field name="tutoring_count"/>
+                        <field name="last_tutoring_date"/>
                     </group>
                     <group string="Tutorings">
                         <field name="tutoring_ids" nolabel="1"/>
