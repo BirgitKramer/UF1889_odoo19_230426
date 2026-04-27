@@ -19,4 +19,4 @@ class Tutoring(models.Model):
         required=True
     )
     duration= fields.Float(string='Duration(hours)')
-    notes = fields.Text(sting='Notes')
+    notes = fields.Text(string='Notes')
