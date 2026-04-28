@@ -26,9 +26,9 @@ Relacion:
 Usar `read_group` para optimizar:
 ```python
   seguimiento = self,env[`mail.activity'].read_group(
-    domain=[('res_model', '=', 'res.partner')],
-    fields=['res_id'],
-    groupby=['res.id']
+    domain=[('res_model', '=', 'res.partner')], # dominio/litro
+    fields=['res_id'],                          # campos o leer/agrupar
+    groupby=['res.id']                          # campo por el que se agrupa
 )
 ```
 
