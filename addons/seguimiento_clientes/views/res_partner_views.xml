@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_seguimiento" model="ir.ui.view">
+        <field name="name">res.partner.form.seguimiento</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='phone']" position="after">
+                <field name="seguimiento_count" string="Nº Seguimientos"/>
+                <field name="ultimo_seguimiento" string="Último Seguimiento"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_tree_seguimiento" model="ir.ui.view">
+        <field name="name">res.partner.tree.seguimiento</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='email']" position="after">
+                <field name="seguimiento_count" string="Seguimientos" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_search_seguimiento" model="ir.ui.view">
+        <field name="name">res.partner.search.seguimiento</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="seguimiento_count" string="Nº Seguimientos"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
