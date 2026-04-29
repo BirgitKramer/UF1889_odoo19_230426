@@ -4,12 +4,12 @@
         <field name="name">academy.tutoring.tree</field>
         <field name="model">academy.tutoring</field>
         <field name="arch" type="xml">
-            <tree string="Tutorings">
+            <list string="Tutorings">
                 <field name="name"/>
                 <field name="date"/>
                 <field name="student_id"/>
                 <field name="notes"/>
-            </tree>
+            </list>
         </field>
     </record>
 
