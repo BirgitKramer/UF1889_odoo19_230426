@@ -21,7 +21,7 @@
         <field name="arch" type="xml">
             <form string="Student">
                 <sheet>
-                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" invisible="state == 'draft'" readonly="is_locked == True"/>
                     <group>
                         <field name="name"/>
                         <field name="email"/>
